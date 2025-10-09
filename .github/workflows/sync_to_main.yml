@@ -1,0 +1,27 @@
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      # Paso 1: Descarga el código del repositorio
+      - uses: actions/checkout@v4
+        with:
+          # Necesario para poder hacer push, usa el GITHUB_TOKEN por defecto
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # Clonar la historia completa para que la fusión sea posible
+          fetch-depth: 0 
+
+      # Paso 2: Configura la identidad de Git (necesario para el commit de fusión)
+      - name: Setup Git Identity
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+      # Paso 3: Sincroniza desarrollo con main
+      - name: Merge desarrollo into main
+        run: |
+          # Cambia a la rama 'main'
+          git checkout main
+          # Fusiona los cambios de 'desarrollo' en 'main'
+          git merge desarrollo
+          # Sube la rama 'main' actualizada al remoto
+          git push origin main
