@@ -1,6 +1,5 @@
 name: HTML Validation (Linting)
 
-# El workflow se ejecuta en 'desarrollo' cada vez que alguien hace un push
 on:
   push:
     branches:
@@ -8,18 +7,17 @@ on:
 
 jobs:
   validate_html:
-    # Ejecuta el job en un ambiente Ubuntu reciente
     runs-on: ubuntu-latest
     steps:
       # Paso 1: Descarga el código del repositorio
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Paso 2: Valida la sintaxis HTML
-      # Usaremos un validador estándar que revisa los archivos HTML
+      # --- AQUÍ ESTÁ LA CORRECCIÓN DE LA ALINEACIÓN ---
+      # La línea de 'name' DEBE estar alineada con la línea de 'name' de arriba
       - name: HTML Validation
-        uses: a7ul/html-proofer-action@v1.0.0
+        # Usa la action estable que definimos en el Paso 24
+        uses: chialab/html-checker-action@v1 
         with:
-          # Archivos que queremos validar (todos los .html que no estén en node_modules)
-          directory: "./"
-          arguments: "--ext .html --allow-hash-href"
+          files: '/*.html' # Valida todos los archivos HTML en el proyecto
+          options: --clean-names 
