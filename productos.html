@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skull Coffee | Productos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/Logo.png">
+    </head>
+<body>
+    <header>
+        <hgroup>
+            <a href="index.html"><h1>Skull Coffee</h1></a>
+            <p>La Oscuridad te espera. Tostado Localmente.</p>
+        </hgroup>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html" class="active">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="productos-page">
+        <section id="productos-grid" aria-labelledby="productos-heading">
+            <h2 id="productos-heading" class="section-centered-heading">Nuestra Colección de Procesos</h2>
+            <p class="section-centered-text">Desde el suave "Honey" hasta el intenso "Secado Natural", tenemos el café perfecto para tu ritual.</p>
+
+            <div class="productos-wrapper">
+                <div class="producto-card" data-sku="SK001" data-precio="12.50">
+                    <article>
+                        <h3>Proceso Honey 🍯</h3>
+                        <img src="img/Captura de pantalla 2025-10-08 175230.png" alt="Granos de café Proceso Honey" class="product-img">
+                        <p>Los granos se secan manteniendo una capa de mucílago adherida. Esto transfiere al café un sabor natural, **dulce y complejo**, con un cuerpo más redondo y notas que recuerdan al caramelo y la fruta madura.</p>
+                        <p class="precio">$200 Cordobas</p>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </article>
+                </div>
+
+                <div class="producto-card" data-sku="SK002" data-precio="15.00">
+                    <article>
+                        <h3>Proceso Lavado 💧</h3>
+                        <img src="img/Captura de pantalla 2025-10-08 175214.png" alt="Granos de café Proceso Lavado" class="product-img">
+                        <p>La pulpa de la cereza es removida por completo antes del secado. Esto produce una taza **más limpia, brillante**, con mayor acidez y notas cítricas o florales muy definidas.</p>
+                        <p class="precio">$200 Cordobas</p>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </article>
+                </div>
+                
+                <div class="producto-card" data-sku="SK003" data-precio="18.00">
+                    <article>
+                        <h3>Secado Natural 🌞</h3>
+                        <img src="img/Captura de pantalla 2025-10-08 175242.png" alt="Granos de café Secado Natural" class="product-img">
+                        <p>El grano se seca dentro de la cereza, sin retirar la pulpa. Esto produce sabores **intensos, afrutados** y un cuerpo pesado, con notas distintivas de frutas del bosque o bayas.</p>
+                        <p class="precio">$250 Cordobas</p>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <aside id="carrito-aside" aria-labelledby="carrito-heading">
+            <h2 id="carrito-heading">Tu Carrito 🛒</h2>
+            <ul id="carrito-lista">
+            </ul>
+            <p>Total: $<span id="carrito-total">0.00</span></p>
+            <button id="checkout-btn">Finalizar Compra</button>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Skull Coffee. Tostado con pasión en San Isidro.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/skullcoffee__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Síguenos en Instagram">Instagram</a> |
+            <a href="https://www.facebook.com/Salvamex19?locale=es_LA" aria-label="Síguenos en Facebook">Facebook</a>
+        </div>
+        <button id="toggle-theme-btn">Cambiar Tema</button>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
