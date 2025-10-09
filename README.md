@@ -29,5 +29,5 @@ GitHub Actions: Automatización de tareas clave como la validación de HTML y el
 GitHub Pages: Plataforma de hosting gratuita para la publicación del sitio web final.
 
 Integrantes: 
-Edgard Alberto Ortiz Matus
-Gustavo Isaac Tercero Vidaurre
+Edgard Alberto Ortiz Matus.
+Gustavo Isaac Tercero Vidaurre.
