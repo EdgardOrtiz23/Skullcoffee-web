@@ -27,3 +27,7 @@ GitHub: Alojamiento del repositorio, uso de ramas (main y desarrollo), y gestió
 GitHub Actions: Automatización de tareas clave como la validación de HTML y el despliegue automático a producción.
 
 GitHub Pages: Plataforma de hosting gratuita para la publicación del sitio web final.
+
+Integrantes: 
+Edgard Alberto Ortiz Matus
+Gustavo Isaac Tercero Vidaurre
