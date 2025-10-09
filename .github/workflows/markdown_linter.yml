@@ -1,0 +1,20 @@
+name: Markdown Linter (Formato)
+
+on:
+  # Se ejecuta en cada push a la rama de desarrollo
+  push:
+    branches:
+      - desarrollo
+
+jobs:
+  lint_markdown:
+    runs-on: ubuntu-latest
+    steps:
+      # Descarga el código
+      - uses: actions/checkout@v4
+
+      # Linter de Markdown
+      - name: Lint all Markdown files
+        uses: avto-dev/markdown-lint@v1.6.0
+        with:
+          args: './/*.md' # Revisa todos los archivos .md
